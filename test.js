@@ -10,6 +10,10 @@ BBCMicrobit.discover(function(microbit) {
     process.exit(0);
   });
 
+  microbit.on('event', function(id, value) {
+    console.log('\ton -> event: %d %d', id, value);
+  })
+
   microbit.on('temperatureChange', function(temperature) {
     console.log('\ton -> temperature change: temperature = %d °C', temperature);
   });

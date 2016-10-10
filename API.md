@@ -92,6 +92,26 @@ microbit.readFirmwareRevision(callback(error, firmwareRevision));
 
 ```
 
+## [Event service](https://lancaster-university.github.io/microbit-docs/ble/event-service/)
+
+### Subscription
+
+```javascript
+microbit.subscribeEvent(callback(error));
+
+microbit.unsubscribeEvent(callback(error));
+```
+
+#### Event
+
+```javascript
+microbit.on('event', function(event, data) {
+  
+});
+```
+
+### Write
+
 ## [Accelerometer](https://lancaster-university.github.io/microbit-docs/ble/accelerometer-service/)
 
 Units for `x`, `y`, and `z` is G's.
