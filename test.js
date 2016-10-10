@@ -1,7 +1,7 @@
 var async = require('async');
 
 var BBCMicrobit = require('./index');
-console.log
+
 BBCMicrobit.discover(function(microbit) {
   console.log('discovered ' + microbit);
 
