@@ -1,7 +1,7 @@
 var async = require('async');
 
 var BBCMicrobit = require('./index');
-
+console.log
 BBCMicrobit.discover(function(microbit) {
   console.log('discovered ' + microbit);
 
@@ -80,6 +80,14 @@ BBCMicrobit.discover(function(microbit) {
         console.log('\tfirmware revision = ' + firmwareRevision);
         callback();
       });
+    },
+    function(callback) {
+      console.log('subscribeEvent')
+      microbit.subscribeEvent(callback);
+    },
+    function(callback) {
+      console.log('writeEvent')
+      microbit.writeEvent(9101, 42, callback);
     },
     function(callback) {
       console.log('writeLedMatrixState');
